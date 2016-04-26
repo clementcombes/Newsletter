@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Payname Newsletter builder</title>
+<style type="text/css">
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+/**
+ * typeboost.css v0.1.5
+ * github.com/englishextra/typeboost.css
+ */
+ .col div,.col span,.col applet,.col object,.col iframe,.col h1,.col h2,.col h3,.col h4,.col h5,.col h6,.col p,.col blockquote,.col pre,.col a,.col abbr,.col acronym,.col address,.col big,.col cite,.col code,.col del,.col dfn,.col em,.col img,.col ins,.col kbd,.col q,.col s,.col samp,.col small,.col strike,.col strong,.col sub,.col sup,.col tt,.col var,.col b,.col u,.col i,.col center,.col dl,.col dt,.col dd,.col ol,.col ul,.col details,.col li,.col fieldset,.col form,.col label,.col legend,.col table,.col caption,.col tbody,.col tfoot,.col thead,.col tr,.col th,.col td,.col article,.col aside,.col canvas,.col embed,.col figure,.col figcaption,.col footer,.col header,.col hgroup,.col menu,.col nav,.col output,.col ruby,.col section,.col summary,.col time,.col mark,.col audio,.col video {font-size: 100%;font: inherit;border: 0;vertical-align: baseline;margin: 0;padding: 0;}.col sub,.col sup {font-size: 75%;line-height: 0;position: relative;}.col sup {top: -0.5em;}.col sub {bottom: -0.25em;}.col blockquote,.col q {quotes: none;}.col blockquote:before,.col blockquote:after,.col q:before,.col q:after {content: '';content: none;}.col a {text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}.col h1 a,.col h2 a,.col h3 a,.col h4 a,.col h5 a,.col h6 a {font-weight: inherit;}.col address,.col p.address {font-size: .813rem;line-height: 1.500;margin-right: 0;}.col p.blockquote {margin-right: 0;}.col h1{font-size:3.375rem;line-height:1.200;padding:0;}.col h2{font-size:1.611rem;line-height:1.200;padding:0;}.col h3{font-size:1.210rem;line-height:1.200;padding:0;}.col h4{font-size:1.100rem;line-height:1.200;font-variant:small-caps;letter-spacing:0.063rem;padding:0;}.col h5{text-transform:uppercase;padding:0;}.col h6,.col dl dt{text-decoration:underline;padding:0;}.col h5,.col h6{font-size:1.000rem;line-height:1.200;}.col caption,.col label,.col p.smaller,.col table td,.col table th {font-size: .875rem;line-height: 1.500;}.col p.larger,.col blockquote {font-size: 1.125rem;line-height: 1.500;}.col p,.col p.blockquote,.col dl dt,.col dl dd,.col ul li,.col ol li {font-size: 1.000rem;line-height: 1.500;}.col ul {list-style: disc outside;}.col ol {list-style: decimal inside;}.col pre {white-space: pre;white-space: pre-wrap;word-wrap: inherit;overflow: -moz-scrollbars-horizontal;overflow-x: auto;border: 0;-webkit-box-shadow: none;-moz-box-shadow: none;box-shadow: none;-moz-tab-size: 4;-o-tab-size: 4;tab-size: 4;padding: 1.000rem 1.500rem;}.col pre code {text-shadow: none;}.col pre a {text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;}.col table {width: auto;border-collapse: collapse;border-spacing: 0;}.col caption,.col table th,.col table td {text-align: left;}.col table td,.col table th {padding: 0.313rem 0.625rem;vertical-align: top;}.col pre,.col pre code {font-size: .875rem;line-height: 1.500;}.col table th a:hover,.col table th a:active,.col table th a:focus {text-decoration: underline;}.col img {border: 0;vertical-align: bottom;padding: 0;}.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col select,.col textarea {font-size: .875rem;line-height: 1.500;box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-webkit-box-sizing: border-box;vertical-align: baseline;*vertical-align: middle;-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;padding:0 0.625rem;}.col select{padding:0 0 0 0.313rem;}.col optgroup {margin: 0.188rem;}.col input[type="color"] {padding: 0;}.col button,.col input[type="button"],.col input[type="reset"],.col input[type="submit"],.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col select {height: 2.000rem;}.col button,.col input[type="button"],.col input[type="reset"],.col input[type="submit"] {font-size: .875rem;line-height: 1.500;box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;-webkit-box-sizing: border-box;vertical-align: baseline;*vertical-align: middle;-webkit-tap-highlight-color: rgba(0,0,0,0);outline: none;cursor: pointer;padding:0 0.625rem;}.col label {display: block;margin-bottom: .125rem;}.col textarea {width: 95%;}.col ul,.col ol,.col dl {margin-left: auto;}.col dl dd:before {content: "\2014\00a0";}.col address,.col p.address,.col p.blockquote,.col dl dd,.col blockquote {margin-left: 1.500rem;}.col ol {padding-left: 1.500rem;}.col .indent {text-indent: 1.500rem;}.col ul {padding-left: 2.500rem;}.col td ul {margin-top: 0 !important;}.col td ul li {font-size: inherit !important;line-height: inherit !important;}.col td ol {margin-top: 0 !important;}.col td ol li {font-size: inherit !important;line-height: inherit !important;}.col.textcenter address,.col.textcenter p.address,.col.textcenter dd,.col.textcenter pre,.col.textcenter blockquote,.col.textcenter p.blockquote {margin-left: 0;}.col img,.col input,.col ol li,.col select,.col textarea,.col ul li,.col table td ol,.col table td ul,.col table td dl {margin: 0;}.col address,.col p.address,.col p.blockquote,.col h1,.col h2,.col h3,.col h4,.col h5,.col h6,.col blockquote,.col caption,.col dl,.col dl dd,.col figcaption,.col figure,.col ol,.col p,.col pre,.col table,.col ul,.col details {margin-top: 0;}.col h2+div,.col h2+p,.col h2+table,.col h3+div,.col h3+p,.col h3+table,.col h4+div,.col h4+p,.col h4+table,.col h5+div,.col h5+p,.col h5+table,.col h6+div,.col h6+p,.col h6+table {margin-top: .500rem;}.col address:first-child,.col div+address,.col h1+blockquote,.col h1+div,.col h1+hr,.col h1+div.hr,.col h1+dl,.col h1+ol,.col h1+p,.col h1+pre,.col h1+table,.col h1+ul,.col h1+details,.col h2+blockquote,.col h2+dl,.col h2+h3,.col h2+ol,.col h2+pre,.col h2+ul,.col h2+details,.col h3+blockquote,.col h3+dl,.col h3+h4,.col h3+ol,.col h3+pre,.col h3+ul,.col h3+details,.col h4+blockquote,.col h4+dl,.col h4+h3,.col h4+h5,.col h4+ol,.col h4+pre,.col h4+ul,.col h4+details,.col h5+blockquote,.col h5+dl,.col h5+h6,.col h5+h2,.col h5+ol,.col h5+pre,.col h5+ul,.col h5+details,.col h6+blockquote,.col h6+dl,.col h6+ol,.col h6+pre,.col h6+ul,.col h6+details,.col p+address,.col p+p,.col p.address,.col p.blockquote,.col pre+address,.col table+address,.col table+p.address,.col table+p.blockquote {margin-top: 1.500rem;}.col blockquote+blockquote,.col blockquote+dl,.col blockquote+h1,.col blockquote+h2,.col blockquote+h3,.col blockquote+h4,.col blockquote+h5,.col blockquote+h6,.col blockquote+ol,.col blockquote+p,.col blockquote+pre,.col blockquote+table,.col blockquote+ul,.col blockquote+details,.col div+blockquote,.col div+dl,.col div+h1,.col div+h2,.col div+h3,.col div+h4,.col div+h5,.col div+h6,.col div+ol,.col div+p,.col div+pre,.col div+table,.col div+ul,.col div+details,.col dl+blockquote,.col dl+dl,.col dl+h1,.col dl+h2,.col dl+h3,.col dl+h4,.col dl+h5,.col dl+h6,.col dl+ol,.col dl+p,.col dl+pre,.col dl+table,.col dl+ul,.col dl+details,.col ol+blockquote,.col ol+dl,.col ol+h1,.col ol+h2,.col ol+h3,.col ol+h4,.col ol+h5,.col ol+h6,.col ol+ol,.col ol+p,.col ol+pre,.col ol+table,.col ol+ul,.col ol+details,.col p+blockquote,.col p+dl,.col p+figcaption,.col p+figure,.col p+h1,.col p+h2,.col p+h3,.col p+h4,.col p+h5,.col p+h6,.col p+ol,.col p+pre,.col p+table,.col p+ul,.col p+details,.col pre+blockquote,.col pre+dl,.col pre+h1,.col pre+h2,.col pre+h3,.col pre+h4,.col pre+h5,.col pre+h6,.col pre+ol,.col pre+p,.col pre+pre,.col pre+table,.col pre+ul,.col pre+details,.col table+blockquote,.col table+dl,.col table+h1,.col table+h2,.col table+h3,.col table+h4,.col table+h5,.col table+h6,.col table+ol,.col table+p,.col table+pre,.col table+table,.col table+ul,.col table+details,.col ul+blockquote,.col ul+dl,.col ul+h1,.col ul+h2,.col ul+h3,.col ul+h4,.col ul+h5,.col ul+h6,.col ul+ol,.col ul+p,.col ul+pre,.col ul+table,.col ul+ul,.col ul+details,.col details+blockquote,.col details+dl,.col details+h1,.col details+h2,.col details+h3,.col details+h4,.col details+h5,.col details+h6,.col details+ol,.col details+p,.col details+pre,.col details+table,.col details+ul,.col details+details,.col h1:first-child,.col h2:first-child,.col h3:first-child,.col h4:first-child,.col h5:first-child,.col h6:first-child,.col p:first-child,.col dl:first-child,.col ul:first-child,.col details:first-child,.col ol:first-child,.col blockquote:first-child,.col pre:first-child,.col table:first-child,.col figcaption:first-child,.col figure:first-child {margin-top: 1.500rem;}.col dl dd,.col address:first-of-type,.col p.address:first-of-type,.col address:last-child,.col p.address:last-child,.col p.blockquote:first-of-type,.col p.blockquote:last-child,.col p:last-child,.col dl:last-child,.col ul:last-child,.col details:last-child,.col ol:last-child,.col blockquote:last-child,.col pre:last-child,.col table:first-of-type,.col table:last-child,.col figcaption:last-child,.col figure:last-child {margin-bottom: 0;}.col address,.col blockquote,.col dl,.col figcaption,.col figure,.col ol,.col pre,.col ul,.col details {margin-bottom: 1.500rem;}.col blockquote+p,.col div+p,.col dl+p,.col h1+p,.col h2+p,.col h3+p,.col h4+p,.col h5+p,.col h6+p,.col ol+p,.col p+p,.col pre+p,.col table+p,.col ul+p,.col details+p {margin-bottom: 1.000rem;}.col .textleft {text-align: left;}.col .textright {text-align: right;}.col .textcenter {text-align: center;}.col .larger {font-size: 120%;}.col small,.col .smaller {font-size: 80%;}.col .fade {opacity: 1;transition: opacity .25s ease-in-out;-moz-transition: opacity .25s ease-in-out;-webkit-transition: opacity .25s ease-in-out;}.col .fade:hover {opacity: .5;}.col hr,.col .hr {height: 0.063rem;padding: 0;margin: 1.500rem 0;}/*! * font weights */.col h1,.col h2,.col h4,.col h5,.col h6,.col address,.col p,.col p.address,.col p.blockquote,.col dl dd,.col ul li,.col ol li,.col table td,.col caption,.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col select,.col textarea,.col label {font-weight: normal;}.col h3,.col a,.col table th,.col button,.col input[type="button"],.col input[type="reset"],.col input[type="submit"],.col b,.col strong,.col .bolder,.col .highlight {font-weight: bolder;}/*! * font styles */.col address,.col p.address,.col p.blockquote,.col blockquote,.col caption,.col label,.col i,.col em,.col .italic {font-style: italic;}/*! * font families */.col h1 {font-family: serif;}.col pre,.col pre code {font-family: "Source Code Pro","Consolas",monospace;}.col select {font-family: sans-serif;}.col button,.col input[type="button"],.col input[type="reset"],.col input[type="submit"] {font-family: inherit;}.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col textarea {font-family: inherit;}.col caption,.col table th,.col table td {font-family: inherit;}.col .phonetic {font-family: "Source Code Pro","Consolas",monospace;}/*! * colors */.col a {color: #307CCA;}.col a:hover,.col a:focus,.col a:active {color: #EA6743;}.col h1,.col h2,.col h3,.col h4,.col h5,.col h6,.col h1 a,.col h2 a,.col h3 a,.col h4 a,.col h5 a,.col h6 a,.col pre code,.col pre a,.col caption,.col table td,.col table th a,.col select,.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col textarea,.col input[type^="text"]:focus,.col input[type^="search"]:focus,.col input[type^="email"]:focus,.col input[type^="url"]:focus,.col input[type^="password"]:focus,.col input[type^="tel"]:focus,.col input[type^="color"]:focus,.col input[type^="number"]:focus,.col input[type^="date"]:focus,.col input[type^="month"]:focus,.col input[type^="week"]:focus,.col input[type^="time"]:focus,.col input[type^="datetime"]:focus,.col input[type^="datetime-local"]:focus,.col textarea:focus,.col input[type^="text"]:active,.col input[type^="search"]:active,.col input[type^="email"]:active,.col input[type^="url"]:active,.col input[type^="password"]:active,.col input[type^="tel"]:active,.col input[type^="color"]:active,.col input[type^="number"]:active,.col input[type^="date"]:active,.col input[type^="month"]:active,.col input[type^="week"]:active,.col input[type^="time"]:active,.col input[type^="datetime"]:active,.col input[type^="datetime-local"]:active,.col textarea:active,.col select:active,.col select:focus {color: inherit;}.col pre {color: inherit;background: #F1F1F1;}.col pre a:hover,.col pre a:active,.col pre a:focus {color: inherit;}.col select {background: #FFFFFF;border: 0.063rem solid #C3C3C3;}.col input[type^="text"],.col input[type^="search"],.col input[type^="email"],.col input[type^="url"],.col input[type^="password"],.col input[type^="tel"],.col input[type^="color"],.col input[type^="number"],.col input[type^="date"],.col input[type^="month"],.col input[type^="week"],.col input[type^="time"],.col input[type^="datetime"],.col input[type^="datetime-local"],.col textarea {background: #FFFFFF;border: 0.063rem solid #C3C3C3;}.col button:hover,.col input[type="button"]:hover,.col input[type="reset"]:hover,.col input[type="submit"]:hover,.col button:active,.col input[type="button"]:active,.col input[type="reset"]:active,.col input[type="submit"]:active,.col button:focus,.col input[type="button"]:focus,.col input[type="reset"]:focus,.col input[type="submit"]:focus {color: #FFFFFF;background: #606060;border: 0.063rem solid #606060;}.col button,.col input[type="button"],.col input[type="reset"],.col input[type="submit"] {color: #FFFFFF;background: #474747;border: 0.063rem solid #474747;}.col input[type^="text"]:focus,.col input[type^="search"]:focus,.col input[type^="email"]:focus,.col input[type^="url"]:focus,.col input[type^="password"]:focus,.col input[type^="tel"]:focus,.col input[type^="color"]:focus,.col input[type^="number"]:focus,.col input[type^="date"]:focus,.col input[type^="month"]:focus,.col input[type^="week"]:focus,.col input[type^="time"]:focus,.col input[type^="datetime"]:focus,.col input[type^="datetime-local"]:focus,.col textarea:focus,.col input[type^="text"]:active,.col input[type^="search"]:active,.col input[type^="email"]:active,.col input[type^="url"]:active,.col input[type^="password"]:active,.col input[type^="tel"]:active,.col input[type^="color"]:active,.col input[type^="number"]:active,.col input[type^="date"]:active,.col input[type^="month"]:active,.col input[type^="week"]:active,.col input[type^="time"]:active,.col input[type^="datetime"]:active,.col input[type^="datetime-local"]:active,.col textarea:active {background: #F2F2F2;border: 0.063rem solid #C3C3C3;}.col select:hover {background: #F2F2F2;border: 0.063rem solid #C3C3C3;}.col select:active,.col select:focus {background: #F2F2F2;border: 0.063rem solid #C3C3C3;}.col select:disabled,.col input[type^="text"]:disabled,.col input[type^="search"]:disabled,.col input[type^="email"]:disabled,.col input[type^="url"]:disabled,.col input[type^="password"]:disabled,.col input[type^="tel"]:disabled,.col input[type^="color"]:disabled,.col input[type^="number"]:disabled,.col input[type^="date"]:disabled,.col input[type^="month"]:disabled,.col input[type^="week"]:disabled,.col input[type^="time"]:disabled,.col input[type^="datetime"]:disabled,.col input[type^="datetime-local"]:disabled,.col textarea:disabled {background: #D6D6D6;border-color: #D6D6D6;}.col button:disabled,.col input[type="button"]:disabled,.col input[type="reset"]:disabled,.col input[type="submit"]:disabled {background: #D6D6D6;border-color: #D6D6D6;}.col table {border: none;border-top-width: 0.063rem;border-top-style: solid;border-top-color: #C3C3C3;border-right-width: 0.063rem;border-right-style: solid;border-right-color: #C3C3C3;border-left-width: 0.063rem;border-left-style: solid;border-left-color: #C3C3C3;}.col table th {border: none;border-bottom-width: 0.063rem;border-bottom-style: solid;border-bottom-color: #C3C3C3;}.col table td {border: none;border-bottom-width: 0.063rem;border-bottom-style: solid;border-bottom-color: #C3C3C3;}.col img {background-color: inherit;border: 0;}.col .highlight {color: #EE6944;}.col hr,.col .hr {background: #C3C3C3;border: 0;}
+html {
+  font-size: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Source Sans Pro","Segoe UI",sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.500;
+  width: 100%;
+  color: #363636;
+  background: #FFFFFF;
+  /* scroll-behavior: smooth; */
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+  -webkit-text-size-adjust: none;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+a:hover,
+a:active,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  outline: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: bottom;
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+b,
+strong,
+.bolder {
+  font-weight: bold;
+}
+i,
+em,
+.italic {
+  font-style: italic;
+}
+*,*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+[class^="fa-"],[class*=" fa-"] {
+  font-style: normal;
+  font-family: "FontAwesome" !important;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  color: #FFFFFF;
+  background: #56A9FF;
+}
+::-moz-selection {
+  color: #FFFFFF;
+  background: #56A9FF;
+}
+/* * {
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+} */
+i.fa {
+  font-style: normal;
+}
+table.respond {
+  width: auto;
+}
+/*!
+ * fix for tranquil-heart.css google-prettify theme
+ */
+ol.linenums {
+  margin: 0 0 0 3.000em !important;
+}
+/*!
+ * fixes to typeboost.css
+ */
+.col a {
+  font-weight: inherit;
+  color: #307CCA;
+}
+.col a:hover,
+.col a:active,
+.col a:focus {
+  color: #EA6743;
+}
+.col .highlight {
+  color: #EE6944;
+}
+.col h1 {
+  font-family: "Source Sans Pro","Segoe UI",sans-serif;
+  font-weight: 300;
+  color: #000000;
+  margin-top: 2.500rem !important;
+}
+.col h2+div form p:first-child {
+  margin-top: 0;
+}
+.col img,
+.col svg,
+.col video {
+  width: 100%;
+}
+.col img,
+.col svg {
+  height: auto;
+}
+.col video,
+.col svg {
+  display: block;
+  padding: 0;
+}
+.col pre,
+.col pre code {
+  font-family: "Source Code Pro","Consolas",monospace;
+  font-size: 0.875rem;
+}
+.col .phonetic {
+  font-family: "Source Code Pro","Consolas",monospace;
+}
+.col .footer a {
+  font-weight: normal;
+  color: inherit;
+}
+.col .footer a:hover,
+.col .footer a:focus,
+.col .footer a:active {
+  text-decoration: underline;
+}
+
+</style>
+<script type="text/javascript">
+/**
+ * marked - a markdown parser
+ * Copyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)
+ * https://github.com/chjj/marked
+ */
+
+;(function() {
+
+/**
+ * Block-Level Grammar
+ */
+
+var block = {
+  newline: /^\n+/,
+  code: /^( {4}[^\n]+\n*)+/,
+  fences: noop,
+  hr: /^( *[-*_]){3,} *(?:\n+|$)/,
+  heading: /^ *(#{1,6}) *([^\n]+?) *#* *(?:\n+|$)/,
+  nptable: noop,
+  lheading: /^([^\n]+)\n *(=|-){2,} *(?:\n+|$)/,
+  blockquote: /^( *>[^\n]+(\n(?!def)[^\n]+)*\n*)+/,
+  list: /^( *)(bull) [\s\S]+?(?:hr|def|\n{2,}(?! )(?!\1bull )\n*|\s*$)/,
+  html: /^ *(?:comment *(?:\n|\s*$)|closed *(?:\n{2,}|\s*$)|closing *(?:\n{2,}|\s*$))/,
+  def: /^ *\[([^\]]+)\]: *<?([^\s>]+)>?(?: +["(]([^\n]+)[")])? *(?:\n+|$)/,
+  table: noop,
+  paragraph: /^((?:[^\n]+\n?(?!hr|heading|lheading|blockquote|tag|def))+)\n*/,
+  text: /^[^\n]+/
+};
+
+block.bullet = /(?:[*+-]|\d+\.)/;
+block.item = /^( *)(bull) [^\n]*(?:\n(?!\1bull )[^\n]*)*/;
+block.item = replace(block.item, 'gm')
+  (/bull/g, block.bullet)
+  ();
+
+block.list = replace(block.list)
+  (/bull/g, block.bullet)
+  ('hr', '\\n+(?=\\1?(?:[-*_] *){3,}(?:\\n+|$))')
+  ('def', '\\n+(?=' + block.def.source + ')')
+  ();
+
+block.blockquote = replace(block.blockquote)
+  ('def', block.def)
+  ();
+
+block._tag = '(?!(?:'
+  + 'a|em|strong|small|s|cite|q|dfn|abbr|data|time|code'
+  + '|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo'
+  + '|span|br|wbr|ins|del|img)\\b)\\w+(?!:/|[^\\w\\s@]*@)\\b';
+
+block.html = replace(block.html)
+  ('comment', /<!--[\s\S]*?-->/)
+  ('closed', /<(tag)[\s\S]+?<\/\1>/)
+  ('closing', /<tag(?:"[^"]*"|'[^']*'|[^'">])*?>/)
+  (/tag/g, block._tag)
+  ();
+
+block.paragraph = replace(block.paragraph)
+  ('hr', block.hr)
+  ('heading', block.heading)
+  ('lheading', block.lheading)
+  ('blockquote', block.blockquote)
+  ('tag', '<' + block._tag)
+  ('def', block.def)
+  ();
+
+/**
+ * Normal Block Grammar
+ */
+
+block.normal = merge({}, block);
+
+/**
+ * GFM Block Grammar
+ */
+
+block.gfm = merge({}, block.normal, {
+  fences: /^ *(`{3,}|~{3,})[ \.]*(\S+)? *\n([\s\S]*?)\s*\1 *(?:\n+|$)/,
+  paragraph: /^/,
+  heading: /^ *(#{1,6}) +([^\n]+?) *#* *(?:\n+|$)/
+});
+
+block.gfm.paragraph = replace(block.paragraph)
+  ('(?!', '(?!'
+    + block.gfm.fences.source.replace('\\1', '\\2') + '|'
+    + block.list.source.replace('\\1', '\\3') + '|')
+  ();
+
+/**
+ * GFM + Tables Block Grammar
+ */
+
+block.tables = merge({}, block.gfm, {
+  nptable: /^ *(\S.*\|.*)\n *([-:]+ *\|[-| :]*)\n((?:.*\|.*(?:\n|$))*)\n*/,
+  table: /^ *\|(.+)\n *\|( *[-:]+[-| :]*)\n((?: *\|.*(?:\n|$))*)\n*/
+});
+
+/**
+ * Block Lexer
+ */
+
+function Lexer(options) {
+  this.tokens = [];
+  this.tokens.links = {};
+  this.options = options || marked.defaults;
+  this.rules = block.normal;
+
+  if (this.options.gfm) {
+    if (this.options.tables) {
+      this.rules = block.tables;
+    } else {
+      this.rules = block.gfm;
+    }
+  }
+}
+
+/**
+ * Expose Block Rules
+ */
+
+Lexer.rules = block;
+
+/**
+ * Static Lex Method
+ */
+
+Lexer.lex = function(src, options) {
+  var lexer = new Lexer(options);
+  return lexer.lex(src);
+};
+
+/**
+ * Preprocessing
+ */
+
+Lexer.prototype.lex = function(src) {
+  src = src
+    .replace(/\r\n|\r/g, '\n')
+    .replace(/\t/g, '    ')
+    .replace(/\u00a0/g, ' ')
+    .replace(/\u2424/g, '\n');
+
+  return this.token(src, true);
+};
+
+/**
+ * Lexing
+ */
+
+Lexer.prototype.token = function(src, top, bq) {
+  var src = src.replace(/^ +$/gm, '')
+    , next
+    , loose
+    , cap
+    , bull
+    , b
+    , item
+    , space
+    , i
+    , l;
+
+  while (src) {
+    // newline
+    if (cap = this.rules.newline.exec(src)) {
+      src = src.substring(cap[0].length);
+      if (cap[0].length > 1) {
+        this.tokens.push({
+          type: 'space'
+        });
+      }
+    }
+
+    // code
+    if (cap = this.rules.code.exec(src)) {
+      src = src.substring(cap[0].length);
+      cap = cap[0].replace(/^ {4}/gm, '');
+      this.tokens.push({
+        type: 'code',
+        text: !this.options.pedantic
+          ? cap.replace(/\n+$/, '')
+          : cap
+      });
+      continue;
+    }
+
+    // fences (gfm)
+    if (cap = this.rules.fences.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'code',
+        lang: cap[2],
+        text: cap[3] || ''
+      });
+      continue;
+    }
+
+    // heading
+    if (cap = this.rules.heading.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'heading',
+        depth: cap[1].length,
+        text: cap[2]
+      });
+      continue;
+    }
+
+    // table no leading pipe (gfm)
+    if (top && (cap = this.rules.nptable.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: 'table',
+        header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3].replace(/\n$/, '').split('\n')
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = 'right';
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = 'center';
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = 'left';
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i].split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
+      continue;
+    }
+
+    // lheading
+    if (cap = this.rules.lheading.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'heading',
+        depth: cap[2] === '=' ? 1 : 2,
+        text: cap[1]
+      });
+      continue;
+    }
+
+    // hr
+    if (cap = this.rules.hr.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'hr'
+      });
+      continue;
+    }
+
+    // blockquote
+    if (cap = this.rules.blockquote.exec(src)) {
+      src = src.substring(cap[0].length);
+
+      this.tokens.push({
+        type: 'blockquote_start'
+      });
+
+      cap = cap[0].replace(/^ *> ?/gm, '');
+
+      // Pass `top` to keep the current
+      // "toplevel" state. This is exactly
+      // how markdown.pl works.
+      this.token(cap, top, true);
+
+      this.tokens.push({
+        type: 'blockquote_end'
+      });
+
+      continue;
+    }
+
+    // list
+    if (cap = this.rules.list.exec(src)) {
+      src = src.substring(cap[0].length);
+      bull = cap[2];
+
+      this.tokens.push({
+        type: 'list_start',
+        ordered: bull.length > 1
+      });
+
+      // Get each top-level item.
+      cap = cap[0].match(this.rules.item);
+
+      next = false;
+      l = cap.length;
+      i = 0;
+
+      for (; i < l; i++) {
+        item = cap[i];
+
+        // Remove the list item's bullet
+        // so it is seen as the next token.
+        space = item.length;
+        item = item.replace(/^ *([*+-]|\d+\.) +/, '');
+
+        // Outdent whatever the
+        // list item contains. Hacky.
+        if (~item.indexOf('\n ')) {
+          space -= item.length;
+          item = !this.options.pedantic
+            ? item.replace(new RegExp('^ {1,' + space + '}', 'gm'), '')
+            : item.replace(/^ {1,4}/gm, '');
+        }
+
+        // Determine whether the next list item belongs here.
+        // Backpedal if it does not belong in this list.
+        if (this.options.smartLists && i !== l - 1) {
+          b = block.bullet.exec(cap[i + 1])[0];
+          if (bull !== b && !(bull.length > 1 && b.length > 1)) {
+            src = cap.slice(i + 1).join('\n') + src;
+            i = l - 1;
+          }
+        }
+
+        // Determine whether item is loose or not.
+        // Use: /(^|\n)(?! )[^\n]+\n\n(?!\s*$)/
+        // for discount behavior.
+        loose = next || /\n\n(?!\s*$)/.test(item);
+        if (i !== l - 1) {
+          next = item.charAt(item.length - 1) === '\n';
+          if (!loose) loose = next;
+        }
+
+        this.tokens.push({
+          type: loose
+            ? 'loose_item_start'
+            : 'list_item_start'
+        });
+
+        // Recurse.
+        this.token(item, false, bq);
+
+        this.tokens.push({
+          type: 'list_item_end'
+        });
+      }
+
+      this.tokens.push({
+        type: 'list_end'
+      });
+
+      continue;
+    }
+
+    // html
+    if (cap = this.rules.html.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: this.options.sanitize
+          ? 'paragraph'
+          : 'html',
+        pre: !this.options.sanitizer
+          && (cap[1] === 'pre' || cap[1] === 'script' || cap[1] === 'style'),
+        text: cap[0]
+      });
+      continue;
+    }
+
+    // def
+    if ((!bq && top) && (cap = this.rules.def.exec(src))) {
+      src = src.substring(cap[0].length);
+      this.tokens.links[cap[1].toLowerCase()] = {
+        href: cap[2],
+        title: cap[3]
+      };
+      continue;
+    }
+
+    // table (gfm)
+    if (top && (cap = this.rules.table.exec(src))) {
+      src = src.substring(cap[0].length);
+
+      item = {
+        type: 'table',
+        header: cap[1].replace(/^ *| *\| *$/g, '').split(/ *\| */),
+        align: cap[2].replace(/^ *|\| *$/g, '').split(/ *\| */),
+        cells: cap[3].replace(/(?: *\| *)?\n$/, '').split('\n')
+      };
+
+      for (i = 0; i < item.align.length; i++) {
+        if (/^ *-+: *$/.test(item.align[i])) {
+          item.align[i] = 'right';
+        } else if (/^ *:-+: *$/.test(item.align[i])) {
+          item.align[i] = 'center';
+        } else if (/^ *:-+ *$/.test(item.align[i])) {
+          item.align[i] = 'left';
+        } else {
+          item.align[i] = null;
+        }
+      }
+
+      for (i = 0; i < item.cells.length; i++) {
+        item.cells[i] = item.cells[i]
+          .replace(/^ *\| *| *\| *$/g, '')
+          .split(/ *\| */);
+      }
+
+      this.tokens.push(item);
+
+      continue;
+    }
+
+    // top-level paragraph
+    if (top && (cap = this.rules.paragraph.exec(src))) {
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'paragraph',
+        text: cap[1].charAt(cap[1].length - 1) === '\n'
+          ? cap[1].slice(0, -1)
+          : cap[1]
+      });
+      continue;
+    }
+
+    // text
+    if (cap = this.rules.text.exec(src)) {
+      // Top-level should never reach here.
+      src = src.substring(cap[0].length);
+      this.tokens.push({
+        type: 'text',
+        text: cap[0]
+      });
+      continue;
+    }
+
+    if (src) {
+      throw new
+        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+    }
+  }
+
+  return this.tokens;
+};
+
+/**
+ * Inline-Level Grammar
+ */
+
+var inline = {
+  escape: /^\\([\\`*{}\[\]()#+\-.!_>])/,
+  autolink: /^<([^ >]+(@|:\/)[^ >]+)>/,
+  url: noop,
+  tag: /^<!--[\s\S]*?-->|^<\/?\w+(?:"[^"]*"|'[^']*'|[^'">])*?>/,
+  link: /^!?\[(inside)\]\(href\)/,
+  reflink: /^!?\[(inside)\]\s*\[([^\]]*)\]/,
+  nolink: /^!?\[((?:\[[^\]]*\]|[^\[\]])*)\]/,
+  strong: /^__([\s\S]+?)__(?!_)|^\*\*([\s\S]+?)\*\*(?!\*)/,
+  em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+  code: /^(`+)\s*([\s\S]*?[^`])\s*\1(?!`)/,
+  br: /^ {2,}\n(?!\s*$)/,
+  del: noop,
+  text: /^[\s\S]+?(?=[\\<!\[_*`]| {2,}\n|$)/
+};
+
+inline._inside = /(?:\[[^\]]*\]|[^\[\]]|\](?=[^\[]*\]))*/;
+inline._href = /\s*<?([\s\S]*?)>?(?:\s+['"]([\s\S]*?)['"])?\s*/;
+
+inline.link = replace(inline.link)
+  ('inside', inline._inside)
+  ('href', inline._href)
+  ();
+
+inline.reflink = replace(inline.reflink)
+  ('inside', inline._inside)
+  ();
+
+/**
+ * Normal Inline Grammar
+ */
+
+inline.normal = merge({}, inline);
+
+/**
+ * Pedantic Inline Grammar
+ */
+
+inline.pedantic = merge({}, inline.normal, {
+  strong: /^__(?=\S)([\s\S]*?\S)__(?!_)|^\*\*(?=\S)([\s\S]*?\S)\*\*(?!\*)/,
+  em: /^_(?=\S)([\s\S]*?\S)_(?!_)|^\*(?=\S)([\s\S]*?\S)\*(?!\*)/
+});
+
+/**
+ * GFM Inline Grammar
+ */
+
+inline.gfm = merge({}, inline.normal, {
+  escape: replace(inline.escape)('])', '~|])')(),
+  url: /^(https?:\/\/[^\s<]+[^<.,:;"')\]\s])/,
+  del: /^~~(?=\S)([\s\S]*?\S)~~/,
+  text: replace(inline.text)
+    (']|', '~]|')
+    ('|', '|https?://|')
+    ()
+});
+
+/**
+ * GFM + Line Breaks Inline Grammar
+ */
+
+inline.breaks = merge({}, inline.gfm, {
+  br: replace(inline.br)('{2,}', '*')(),
+  text: replace(inline.gfm.text)('{2,}', '*')()
+});
+
+/**
+ * Inline Lexer & Compiler
+ */
+
+function InlineLexer(links, options) {
+  this.options = options || marked.defaults;
+  this.links = links;
+  this.rules = inline.normal;
+  this.renderer = this.options.renderer || new Renderer;
+  this.renderer.options = this.options;
+
+  if (!this.links) {
+    throw new
+      Error('Tokens array requires a `links` property.');
+  }
+
+  if (this.options.gfm) {
+    if (this.options.breaks) {
+      this.rules = inline.breaks;
+    } else {
+      this.rules = inline.gfm;
+    }
+  } else if (this.options.pedantic) {
+    this.rules = inline.pedantic;
+  }
+}
+
+/**
+ * Expose Inline Rules
+ */
+
+InlineLexer.rules = inline;
+
+/**
+ * Static Lexing/Compiling Method
+ */
+
+InlineLexer.output = function(src, links, options) {
+  var inline = new InlineLexer(links, options);
+  return inline.output(src);
+};
+
+/**
+ * Lexing/Compiling
+ */
+
+InlineLexer.prototype.output = function(src) {
+  var out = ''
+    , link
+    , text
+    , href
+    , cap;
+
+  while (src) {
+    // escape
+    if (cap = this.rules.escape.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += cap[1];
+      continue;
+    }
+
+    // autolink
+    if (cap = this.rules.autolink.exec(src)) {
+      src = src.substring(cap[0].length);
+      if (cap[2] === '@') {
+        text = cap[1].charAt(6) === ':'
+          ? this.mangle(cap[1].substring(7))
+          : this.mangle(cap[1]);
+        href = this.mangle('mailto:') + text;
+      } else {
+        text = escape(cap[1]);
+        href = text;
+      }
+      out += this.renderer.link(href, null, text);
+      continue;
+    }
+
+    // url (gfm)
+    if (!this.inLink && (cap = this.rules.url.exec(src))) {
+      src = src.substring(cap[0].length);
+      text = escape(cap[1]);
+      href = text;
+      out += this.renderer.link(href, null, text);
+      continue;
+    }
+
+    // tag
+    if (cap = this.rules.tag.exec(src)) {
+      if (!this.inLink && /^<a /i.test(cap[0])) {
+        this.inLink = true;
+      } else if (this.inLink && /^<\/a>/i.test(cap[0])) {
+        this.inLink = false;
+      }
+      src = src.substring(cap[0].length);
+      out += this.options.sanitize
+        ? this.options.sanitizer
+          ? this.options.sanitizer(cap[0])
+          : escape(cap[0])
+        : cap[0]
+      continue;
+    }
+
+    // link
+    if (cap = this.rules.link.exec(src)) {
+      src = src.substring(cap[0].length);
+      this.inLink = true;
+      out += this.outputLink(cap, {
+        href: cap[2],
+        title: cap[3]
+      });
+      this.inLink = false;
+      continue;
+    }
+
+    // reflink, nolink
+    if ((cap = this.rules.reflink.exec(src))
+        || (cap = this.rules.nolink.exec(src))) {
+      src = src.substring(cap[0].length);
+      link = (cap[2] || cap[1]).replace(/\s+/g, ' ');
+      link = this.links[link.toLowerCase()];
+      if (!link || !link.href) {
+        out += cap[0].charAt(0);
+        src = cap[0].substring(1) + src;
+        continue;
+      }
+      this.inLink = true;
+      out += this.outputLink(cap, link);
+      this.inLink = false;
+      continue;
+    }
+
+    // strong
+    if (cap = this.rules.strong.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.strong(this.output(cap[2] || cap[1]));
+      continue;
+    }
+
+    // em
+    if (cap = this.rules.em.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.em(this.output(cap[2] || cap[1]));
+      continue;
+    }
+
+    // code
+    if (cap = this.rules.code.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.codespan(escape(cap[2], true));
+      continue;
+    }
+
+    // br
+    if (cap = this.rules.br.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.br();
+      continue;
+    }
+
+    // del (gfm)
+    if (cap = this.rules.del.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.del(this.output(cap[1]));
+      continue;
+    }
+
+    // text
+    if (cap = this.rules.text.exec(src)) {
+      src = src.substring(cap[0].length);
+      out += this.renderer.text(escape(this.smartypants(cap[0])));
+      continue;
+    }
+
+    if (src) {
+      throw new
+        Error('Infinite loop on byte: ' + src.charCodeAt(0));
+    }
+  }
+
+  return out;
+};
+
+/**
+ * Compile Link
+ */
+
+InlineLexer.prototype.outputLink = function(cap, link) {
+  var href = escape(link.href)
+    , title = link.title ? escape(link.title) : null;
+
+  return cap[0].charAt(0) !== '!'
+    ? this.renderer.link(href, title, this.output(cap[1]))
+    : this.renderer.image(href, title, escape(cap[1]));
+};
+
+/**
+ * Smartypants Transformations
+ */
+
+InlineLexer.prototype.smartypants = function(text) {
+  if (!this.options.smartypants) return text;
+  return text
+    // em-dashes
+    .replace(/---/g, '\u2014')
+    // en-dashes
+    .replace(/--/g, '\u2013')
+    // opening singles
+    .replace(/(^|[-\u2014/(\[{"\s])'/g, '$1\u2018')
+    // closing singles & apostrophes
+    .replace(/'/g, '\u2019')
+    // opening doubles
+    .replace(/(^|[-\u2014/(\[{\u2018\s])"/g, '$1\u201c')
+    // closing doubles
+    .replace(/"/g, '\u201d')
+    // ellipses
+    .replace(/\.{3}/g, '\u2026');
+};
+
+/**
+ * Mangle Links
+ */
+
+InlineLexer.prototype.mangle = function(text) {
+  if (!this.options.mangle) return text;
+  var out = ''
+    , l = text.length
+    , i = 0
+    , ch;
+
+  for (; i < l; i++) {
+    ch = text.charCodeAt(i);
+    if (Math.random() > 0.5) {
+      ch = 'x' + ch.toString(16);
+    }
+    out += '&#' + ch + ';';
+  }
+
+  return out;
+};
+
+/**
+ * Renderer
+ */
+
+function Renderer(options) {
+  this.options = options || {};
+}
+
+Renderer.prototype.code = function(code, lang, escaped) {
+  if (this.options.highlight) {
+    var out = this.options.highlight(code, lang);
+    if (out != null && out !== code) {
+      escaped = true;
+      code = out;
+    }
+  }
+
+  if (!lang) {
+    return '<pre><code>'
+      + (escaped ? code : escape(code, true))
+      + '\n</code></pre>';
+  }
+
+  return '<pre><code class="'
+    + this.options.langPrefix
+    + escape(lang, true)
+    + '">'
+    + (escaped ? code : escape(code, true))
+    + '\n</code></pre>\n';
+};
+
+Renderer.prototype.blockquote = function(quote) {
+  return '<blockquote>\n' + quote + '</blockquote>\n';
+};
+
+Renderer.prototype.html = function(html) {
+  return html;
+};
+
+Renderer.prototype.heading = function(text, level, raw) {
+  return '<h'
+    + level
+    + ' id="'
+    + this.options.headerPrefix
+    + raw.toLowerCase().replace(/[^\w]+/g, '-')
+    + '">'
+    + text
+    + '</h'
+    + level
+    + '>\n';
+};
+
+Renderer.prototype.hr = function() {
+  return this.options.xhtml ? '<hr/>\n' : '<hr>\n';
+};
+
+Renderer.prototype.list = function(body, ordered) {
+  var type = ordered ? 'ol' : 'ul';
+  return '<' + type + '>\n' + body + '</' + type + '>\n';
+};
+
+Renderer.prototype.listitem = function(text) {
+  return '<li>' + text + '</li>\n';
+};
+
+Renderer.prototype.paragraph = function(text) {
+  return '<p>' + text + '</p>\n';
+};
+
+Renderer.prototype.table = function(header, body) {
+  return '<table>\n'
+    + '<thead>\n'
+    + header
+    + '</thead>\n'
+    + '<tbody>\n'
+    + body
+    + '</tbody>\n'
+    + '</table>\n';
+};
+
+Renderer.prototype.tablerow = function(content) {
+  return '<tr>\n' + content + '</tr>\n';
+};
+
+Renderer.prototype.tablecell = function(content, flags) {
+  var type = flags.header ? 'th' : 'td';
+  var tag = flags.align
+    ? '<' + type + ' style="text-align:' + flags.align + '">'
+    : '<' + type + '>';
+  return tag + content + '</' + type + '>\n';
+};
+
+// span level renderer
+Renderer.prototype.strong = function(text) {
+  return '<strong>' + text + '</strong>';
+};
+
+Renderer.prototype.em = function(text) {
+  return '<em>' + text + '</em>';
+};
+
+Renderer.prototype.codespan = function(text) {
+  return '<code>' + text + '</code>';
+};
+
+Renderer.prototype.br = function() {
+  return this.options.xhtml ? '<br/>' : '<br>';
+};
+
+Renderer.prototype.del = function(text) {
+  return '<del>' + text + '</del>';
+};
+
+Renderer.prototype.link = function(href, title, text) {
+  if (this.options.sanitize) {
+    try {
+      var prot = decodeURIComponent(unescape(href))
+        .replace(/[^\w:]/g, '')
+        .toLowerCase();
+    } catch (e) {
+      return '';
+    }
+    if (prot.indexOf('javascript:') === 0 || prot.indexOf('vbscript:') === 0) {
+      return '';
+    }
+  }
+  var out = '<a href="' + href + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += '>' + text + '</a>';
+  return out;
+};
+
+Renderer.prototype.image = function(href, title, text) {
+  var out = '<img src="' + href + '" alt="' + text + '"';
+  if (title) {
+    out += ' title="' + title + '"';
+  }
+  out += this.options.xhtml ? '/>' : '>';
+  return out;
+};
+
+Renderer.prototype.text = function(text) {
+  return text;
+};
+
+/**
+ * Parsing & Compiling
+ */
+
+function Parser(options) {
+  this.tokens = [];
+  this.token = null;
+  this.options = options || marked.defaults;
+  this.options.renderer = this.options.renderer || new Renderer;
+  this.renderer = this.options.renderer;
+  this.renderer.options = this.options;
+}
+
+/**
+ * Static Parse Method
+ */
+
+Parser.parse = function(src, options, renderer) {
+  var parser = new Parser(options, renderer);
+  return parser.parse(src);
+};
+
+/**
+ * Parse Loop
+ */
+
+Parser.prototype.parse = function(src) {
+  this.inline = new InlineLexer(src.links, this.options, this.renderer);
+  this.tokens = src.reverse();
+
+  var out = '';
+  while (this.next()) {
+    out += this.tok();
+  }
+
+  return out;
+};
+
+/**
+ * Next Token
+ */
+
+Parser.prototype.next = function() {
+  return this.token = this.tokens.pop();
+};
+
+/**
+ * Preview Next Token
+ */
+
+Parser.prototype.peek = function() {
+  return this.tokens[this.tokens.length - 1] || 0;
+};
+
+/**
+ * Parse Text Tokens
+ */
+
+Parser.prototype.parseText = function() {
+  var body = this.token.text;
+
+  while (this.peek().type === 'text') {
+    body += '\n' + this.next().text;
+  }
+
+  return this.inline.output(body);
+};
+
+/**
+ * Parse Current Token
+ */
+
+Parser.prototype.tok = function() {
+  switch (this.token.type) {
+    case 'space': {
+      return '';
+    }
+    case 'hr': {
+      return this.renderer.hr();
+    }
+    case 'heading': {
+      return this.renderer.heading(
+        this.inline.output(this.token.text),
+        this.token.depth,
+        this.token.text);
+    }
+    case 'code': {
+      return this.renderer.code(this.token.text,
+        this.token.lang,
+        this.token.escaped);
+    }
+    case 'table': {
+      var header = ''
+        , body = ''
+        , i
+        , row
+        , cell
+        , flags
+        , j;
+
+      // header
+      cell = '';
+      for (i = 0; i < this.token.header.length; i++) {
+        flags = { header: true, align: this.token.align[i] };
+        cell += this.renderer.tablecell(
+          this.inline.output(this.token.header[i]),
+          { header: true, align: this.token.align[i] }
+        );
+      }
+      header += this.renderer.tablerow(cell);
+
+      for (i = 0; i < this.token.cells.length; i++) {
+        row = this.token.cells[i];
+
+        cell = '';
+        for (j = 0; j < row.length; j++) {
+          cell += this.renderer.tablecell(
+            this.inline.output(row[j]),
+            { header: false, align: this.token.align[j] }
+          );
+        }
+
+        body += this.renderer.tablerow(cell);
+      }
+      return this.renderer.table(header, body);
+    }
+    case 'blockquote_start': {
+      var body = '';
+
+      while (this.next().type !== 'blockquote_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.blockquote(body);
+    }
+    case 'list_start': {
+      var body = ''
+        , ordered = this.token.ordered;
+
+      while (this.next().type !== 'list_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.list(body, ordered);
+    }
+    case 'list_item_start': {
+      var body = '';
+
+      while (this.next().type !== 'list_item_end') {
+        body += this.token.type === 'text'
+          ? this.parseText()
+          : this.tok();
+      }
+
+      return this.renderer.listitem(body);
+    }
+    case 'loose_item_start': {
+      var body = '';
+
+      while (this.next().type !== 'list_item_end') {
+        body += this.tok();
+      }
+
+      return this.renderer.listitem(body);
+    }
+    case 'html': {
+      var html = !this.token.pre && !this.options.pedantic
+        ? this.inline.output(this.token.text)
+        : this.token.text;
+      return this.renderer.html(html);
+    }
+    case 'paragraph': {
+      return this.renderer.paragraph(this.inline.output(this.token.text));
+    }
+    case 'text': {
+      return this.renderer.paragraph(this.parseText());
+    }
+  }
+};
+
+/**
+ * Helpers
+ */
+
+function escape(html, encode) {
+  return html
+    .replace(!encode ? /&(?!#?\w+;)/g : /&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function unescape(html) {
+  return html.replace(/&([#\w]+);/g, function(_, n) {
+    n = n.toLowerCase();
+    if (n === 'colon') return ':';
+    if (n.charAt(0) === '#') {
+      return n.charAt(1) === 'x'
+        ? String.fromCharCode(parseInt(n.substring(2), 16))
+        : String.fromCharCode(+n.substring(1));
+    }
+    return '';
+  });
+}
+
+function replace(regex, opt) {
+  regex = regex.source;
+  opt = opt || '';
+  return function self(name, val) {
+    if (!name) return new RegExp(regex, opt);
+    val = val.source || val;
+    val = val.replace(/(^|[^\[])\^/g, '$1');
+    regex = regex.replace(name, val);
+    return self;
+  };
+}
+
+function noop() {}
+noop.exec = noop;
+
+function merge(obj) {
+  var i = 1
+    , target
+    , key;
+
+  for (; i < arguments.length; i++) {
+    target = arguments[i];
+    for (key in target) {
+      if (Object.prototype.hasOwnProperty.call(target, key)) {
+        obj[key] = target[key];
+      }
+    }
+  }
+
+  return obj;
+}
+
+
+/**
+ * Marked
+ */
+
+function marked(src, opt, callback) {
+  if (callback || typeof opt === 'function') {
+    if (!callback) {
+      callback = opt;
+      opt = null;
+    }
+
+    opt = merge({}, marked.defaults, opt || {});
+
+    var highlight = opt.highlight
+      , tokens
+      , pending
+      , i = 0;
+
+    try {
+      tokens = Lexer.lex(src, opt)
+    } catch (e) {
+      return callback(e);
+    }
+
+    pending = tokens.length;
+
+    var done = function(err) {
+      if (err) {
+        opt.highlight = highlight;
+        return callback(err);
+      }
+
+      var out;
+
+      try {
+        out = Parser.parse(tokens, opt);
+      } catch (e) {
+        err = e;
+      }
+
+      opt.highlight = highlight;
+
+      return err
+        ? callback(err)
+        : callback(null, out);
+    };
+
+    if (!highlight || highlight.length < 3) {
+      return done();
+    }
+
+    delete opt.highlight;
+
+    if (!pending) return done();
+
+    for (; i < tokens.length; i++) {
+      (function(token) {
+        if (token.type !== 'code') {
+          return --pending || done();
+        }
+        return highlight(token.text, token.lang, function(err, code) {
+          if (err) return done(err);
+          if (code == null || code === token.text) {
+            return --pending || done();
+          }
+          token.text = code;
+          token.escaped = true;
+          --pending || done();
+        });
+      })(tokens[i]);
+    }
+
+    return;
+  }
+  try {
+    if (opt) opt = merge({}, marked.defaults, opt);
+    return Parser.parse(Lexer.lex(src, opt), opt);
+  } catch (e) {
+    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    if ((opt || marked.defaults).silent) {
+      return '<p>An error occured:</p><pre>'
+        + escape(e.message + '', true)
+        + '</pre>';
+    }
+    throw e;
+  }
+}
+
+/**
+ * Options
+ */
+
+marked.options =
+marked.setOptions = function(opt) {
+  merge(marked.defaults, opt);
+  return marked;
+};
+
+marked.defaults = {
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  sanitizer: null,
+  mangle: true,
+  smartLists: false,
+  silent: false,
+  highlight: null,
+  langPrefix: 'lang-',
+  smartypants: false,
+  headerPrefix: '',
+  renderer: new Renderer,
+  xhtml: false
+};
+
+/**
+ * Expose
+ */
+
+marked.Parser = Parser;
+marked.parser = Parser.parse;
+
+marked.Renderer = Renderer;
+
+marked.Lexer = Lexer;
+marked.lexer = Lexer.lex;
+
+marked.InlineLexer = InlineLexer;
+marked.inlineLexer = InlineLexer.output;
+
+marked.parse = marked;
+
+if (typeof module !== 'undefined' && typeof exports === 'object') {
+  module.exports = marked;
+} else if (typeof define === 'function' && define.amd) {
+  define(function() { return marked; });
+} else {
+  this.marked = marked;
+}
+
+}).call(function() {
+  return this || (typeof window !== 'undefined' ? window : global);
+}());
+</script>
+<style type="text/css">
+
+#result {
+  width: 50%;
+  float: left;
+  background: #EAECED;
+  min-height: 100%;
+}
+#right {
+  float: right;
+  padding: 20px;
+  width: 50%;
+  background: #fff;
+}
+#result > table > tbody > tr > td > table:nth-child(2) {
+  margin: 0 auto;
+}
+
+.col input[type="date"] {
+  border: 1px transparent solid;
+}
+
+.col input[type="text"], .col textarea {
+  width: 100%;
+  border: 1px transparent solid;
+  background: transparent;
+}
+
+label {
+  color: #999;
+  font-variant: small-caps!important;
+  letter-spacing: 1px
+}
+
+.col input[type="text"]:focus, .col textarea:focus {
+  border: 1px rgb(195, 195, 195) solid;
+  background: rgb(242, 242, 242);
+  outline: rgba(0, 0, 0, 0.03) 2px solid;
+}
+
+form {
+
+}
+
+fieldset {
+
+}
+
+</style>
+</head>
+<body>
+<div id="right" class="col">
+  <form>
+    <fieldset>
+      <label for="article-title-input">Intitulé de la news</label>
+      <input type="text" id="article-title-input" name="article-title">
+      <label for="article-date-input">Date</label>
+      <input type="date" id="article-date-input" name="article-date" value=>
+    </fieldset>
+  </form>
+  <hr id="inputs">  
+  <form>
+    <fieldset>
+      <input type="button" id="add" name="add" value="+  Nouvel article" onclick="newArticle()">
+      <a id="download"><input type="button" name="download" value="⇩  Enregistrer" onclick="saveFile()"><a/>
+      <input type="button" id="reset" name="reset" value="x  Remise a zero" onclick="resetAll(window.confirm('Attention, ça va tout niker'))">
+    </fieldset>
+  </form>
+</div>
+<div id='result'>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="body-wrap" style="border-collapse: collapse; margin: 0; padding: 0; background-color: #EAECED; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif; font-size: 14px; height: 100%; width: 100%;" bgcolor="#EAECED">
+  <tr><td height="20" width="1" style="border-collapse: collapse; line-height: 20px; font-size: 20px; width: 1px;">&nbsp;</td></tr>
+  <tr>
+    <td style="border-collapse: collapse;">
+      <table align="center" width="150" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+        <tbody>
+          <tr>
+            <td valign="center" height="40" style="border-collapse: collapse;"><a href="https://payname.fr/" target="_blank" style="color: #178b91;"><img src="https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/0a69fdc8-8500-4c8e-a144-7d515034f1c7.png" alt="Payname" width="150" class="logo" style="height: auto; outline: none; text-decoration: none; width: 100%; border: 0 none; line-height: 20px; font-size: 20px; color: #178b91;"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" style="border-collapse: collapse;">
+      <table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background-color: inherit; max-width: 600px;" class="wrap-newsletter" bgcolor="inherit">
+        <tr><td height="20" width="1" style="border-collapse: collapse; line-height: 20px; font-size: 20px; width: 1px;">&nbsp;</td></tr>
+        <tr>
+          <td style="border-collapse: collapse;">
+            <table align="center" width="95%" border="0" cellpadding="0" cellspacing="0" class="header" style="border-collapse: collapse; background-color: #178b91;" bgcolor="#178b91">
+              <tbody>
+                <tr><td height="30" width="1" style="border-collapse: collapse; line-height: 30px; font-size: 30px; width: 1px;">&nbsp;</td></tr>
+                <tr><td align="center" id= "article-title" class="title" style="border-collapse: collapse; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif; font-size: 30px; text-transform: uppercase; font-weight: bold; color: white;"></td></tr>
+                <tr><td height="10" width="1" style="border-collapse: collapse; line-height: 10px; font-size: 10px; width: 1px;">&nbsp;</td></tr>
+                <tr>
+                  <td style="border-collapse: collapse;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                      <tbody>
+                        <tr>
+                          <td align="center" mc:edit="date" id="article-date" class="date" style="border-collapse: collapse; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif; font-size: 14px; text-transform: uppercase; color: #e3e3e3; font-weight: 100;"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <tr><td height="30" width="1" style="border-collapse: collapse; line-height: 30px; font-size: 30px; width: 1px;">&nbsp;</td></tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr id="entry"><td height="40" width="1" style="border-collapse: collapse; line-height: 40px; font-size: 40px; width: 1px;">&nbsp;</td></tr>
+        <tr><td align="center" width="100%â" style="border-collapse:collapse;font-size:22px">Suivez nous !</td></tr>
+        <tr>
+        <td align="center" width="100%â" style="border-collapse:collapse">
+          <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+            <tbody>
+              <tr>
+                <td><table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td height="60" width="20" style="border-collapse:collapse;line-height:60px;font-size:60px;width:20px">&nbsp;</td>
+                      <td align="left" style="border-collapse:collapse">
+                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                          <tbody>
+                            <tr>
+                              <td style="border-collapse:collapse">
+                                <a href="https://www.facebook.com/payname.fr" style="line-height:13px;background-color:#3b5998;color:#ffffff;display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;font-size:13px;border-radius:2px;text-align:center;text-transform:uppercase;text-decoration:none;width:160px" target="_blank">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                                    <tbody>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                      <tr>
+                                        <td style="border-collapse:collapse;font-size:13px"><img src="https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/7c168c3f-6d9a-4357-9876-4dfa78c4adca.png" style="outline:none;text-decoration:none;border:0 none;width:20px;height:20px;line-height:40px" width="20"></td>
+                                        <td height="20" width="10" style="border-collapse:collapse;line-height:20px;font-size:20px;width:10px">&nbsp;</td>
+                                        <td style="border-collapse:collapse;font-size:13px;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;line-height:13px;text-align:center;text-transform:uppercase;text-decoration:none" align="center">Facebook
+                                        </td>
+                                      </tr>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                    </tbody>
+                                  </table>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                  <tbody>
+                    <tr> 
+                      <td height="60" width="20" style="border-collapse:collapse;line-height:60px;font-size:60px;width:20px">&nbsp;</td>
+                      <td align="left" style="border-collapse:collapse">
+                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                          <tbody>
+                            <tr>
+                              <td style="border-collapse:collapse">
+                                <a href="https://twitter.com/payname" style="line-height:13px;background-color:#55acee;color:#ffffff;display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;font-size:13px;border-radius:2px;text-align:center;text-transform:uppercase;text-decoration:none;width:160px" target="_blank">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                                    <tbody>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                      <tr>
+                                        <td style="border-collapse:collapse;font-size:13px"><img src="https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/81209fac-cced-438b-97a2-503b6076eb2b.png" style="outline:none;text-decoration:none;border:0 none;width:20px;height:20px;line-height:40px" width="20"></td>
+                                        <td height="20" width="10" style="border-collapse:collapse;line-height:20px;font-size:20px;width:10px">&nbsp;</td>
+                                        <td style="border-collapse:collapse;font-size:13px;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;line-height:13px;text-align:center;text-transform:uppercase;text-decoration:none" align="center">Twitter</td>
+                                      </tr>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                    </tbody>
+                                  </table>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                  <tbody>
+                    <tr>
+                      <td height="60" width="20" style="border-collapse:collapse;line-height:60px;font-size:60px;width:20px">&nbsp;</td>
+                      <td align="left" style="border-collapse:collapse">
+                        <table align="left" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                          <tbody>
+                            <tr>
+                              <td style="border-collapse:collapse">
+                                <a href="https://www.youtube.com/channel/UCYh3kP85vWzXGd6kwsGBXWQ" style="line-height:13px;background-color:#e52d27;color:#ffffff;display:inline-block;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;font-size:13px;border-radius:2px;text-align:center;text-transform:uppercase;text-decoration:none;width:160px" target="_blank">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+                                    <tbody>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                      <tr>
+                                        <td style="border-collapse:collapse;font-size:13px"><img src="https://gallery.mailchimp.com/8ed9706f04d0d6f6c1e850f81/images/bac1c865-3b4e-47f7-8d1f-de978fcdd9cf.png" style="outline:none;text-decoration:none;border:0 none;width:20px;height:20px;line-height:40px" width="20"></td>
+                                        <td height="20" width="10" style="border-collapse:collapse;line-height:20px;font-size:20px;width:10px">&nbsp;</td>
+                                        <td style="border-collapse:collapse;font-size:13px;font-family:'Open Sans',Trebuchet MS,Verdana,arial,sans-serif;line-height:13px;text-align:center;text-transform:uppercase;text-decoration:none" align="center">Youtube
+                                        </td>
+                                      </tr>
+                                      <tr><td height="10" width="1" style="border-collapse:collapse;line-height:10px;font-size:10px;width:1px">&nbsp;</td></tr>
+                                    </tbody>
+                                  </table>
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td></tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+        <tr>
+          <td style="border-collapse: collapse;">
+            <table align="center" width="50%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;"> 
+              <tbody>
+                <tr><td align="center" width="100%" style="border-collapse: collapse; font-size: 2px; line-height: 2px; background-color: #ABABAB;" bgcolor="#ABABAB">&nbsp;</td></tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr><td height="40" width="1" style="border-collapse: collapse; line-height: 40px; font-size: 40px; width: 1px;">&nbsp;</td></tr>
+        <tr>
+          <td align="center" style="border-collapse: collapse;">
+            <div class="button"><!--[if mso]>
+              <v:roundrect>
+                (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:200px;" arcsize="5%" stroke="f" )
+                <w:anchorlock/>
+                <center style="color:#ffffff;text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;">se désabonner
+                </center>
+              </v:roundrect><!--[endif]--><a href="*|UNSUB|*" style="line-height: 40px; background-color: #DEDEDE; color: #ffffff; display: inline-block; font-family: 'Open Sans',Trebuchet MS,Verdana, arial, sans-serif; font-size: 13px; border-radius: 2px; text-align: center; text-transform: uppercase; text-decoration: none; width: 200px; -webkit-text-size-adjust: none;" target="_blank">se désabonner</a>
+            </div>
+          </td>
+        </tr>
+        <tr><td height="30" width="1" style="border-collapse: collapse; line-height: 30px; font-size: 30px; width: 1px;">&nbsp;</td></tr>
+        <tr><td align="center" style="border-collapse: collapse;">Vous recevez cet email car vous êtes inscrit à la Newsletter sur <a href="https://payname.fr/" target="_blank" style="color: #178b91;">Payname.fr</a></td></tr>
+        <tr><td height="10" width="1" style="border-collapse: collapse; line-height: 10px; font-size: 10px; width: 1px;">&nbsp;</td></tr>
+        <tr><td align="center" style="border-collapse: collapse; font-family: 'Open Sans',Trebuchet MS,Verdana, arial, sans-serif; color: #cccccc; font-size: 12px; line-height: 20px;" class="secondary">Payname, 27 rue d'Aubuisson Toulouse 31000 France</td></tr>
+        <tr><td height="20" width="1" style="border-collapse: collapse; line-height: 20px; font-size: 20px; width: 1px;">&nbsp;</td></tr>
+        <tr><td align="center" style="border-collapse: collapse; font-family: 'Open Sans',Trebuchet MS,Verdana, arial, sans-serif; color: #cccccc; font-size: 12px; line-height: 20px;" class="secondary">L’attention du public est attirée sur le fait que Payname, établissement de paiement, n’est pas une banque.</td></tr>
+        <tr><td height="40" width="1" style="border-collapse: collapse; line-height: 40px; font-size: 40px; width: 1px;">&nbsp;</td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</div>
+
+<script type="text/javascript">
+'use strict'
+
+const renderArticleForm = id => `
+<hr>
+<form id="form-${id}">
+  <fieldset>
+    <label for="title-${id}-input">Titre de l'article</label>
+    <input type="text" id="title-${id}-input" name="title-${id}">
+    <label for="img-url-${id}-input">Url de l'image</label>
+    <input type="text" id="img-url-${id}-input" name="img-url-${id}-input">
+    <label for="url-${id}-input">Url du bouton</label>
+    <input type="text" id="url-${id}-input" name="url-${id}-input">
+    <label for="url-name-${id}-input">Texte du bouton</label>
+    <input type="text" id="url-name-${id}-input" name="url-name-${id}-input">
+    <label for="content-${id}-input">Contenu de l'article</label>
+  </fieldset>
+  <textarea id="content-${id}-input" name="content-${id}-input" rows="10" cols="50"></textarea>
+</form>
+`
+
+const renderFinal = () => `
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <title>email Payname</title>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  </head>
+  <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="margin: 0; padding: 0;">
+  ${result.innerHTML}
+  </body>
+</html>
+`
+
+const renderArticle = id => `
+<tr><td height="20" width="1" style="border-collapse: collapse; line-height: 20px; font-size: 20px; width: 1px;">&nbsp;</td></tr>
+<tr>
+  <td style="border-collapse: collapse;">
+    <table align="center" width="95%" border="0" cellpadding="0" cellspacing="0" class="article" style="border-collapse: collapse; background-color: white; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif;" bgcolor="white">
+      <tbody>
+        <tr><td style="border-collapse: collapse;"><a id="banner-link-${id}" href="#" target="_blank" style="color: #178b91;"><img id="img-url-${id}" src="#" alt="" style="height: auto; line-height: 100%; outline: none; text-decoration: none; width: 100%; border: 0 none;"></a></td></tr>
+        <tr><td height="30" width="1" style="border-collapse: collapse; line-height: 30px; font-size: 30px; width: 1px;">&nbsp;</td></tr>
+        <tr>
+          <td align="center" style="border-collapse: collapse;">
+            <table align="center" width="85%" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse; background-color: white; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif; width: 85%;" class="article" bgcolor="white">
+              <tbody>
+                <tr>
+                  <td id="title-${id}" align="center" class="titre" style="border-collapse: collapse; font-size: 35px; color: #171717; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif;"></td>
+                </tr>
+                <tr>
+                  <td height="25" width="1" style="border-collapse: collapse; line-height: 25px; font-size: 25px; width: 1px;">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td id="content-${id}" align="center" class="description" style="border-collapse: collapse; font-family: 'Open Sans', Trebuchet MS, Verdana, arial, sans-serif; color: #666666; font-size: 16px; line-height: 30px;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+        <tr><td height="40" width="1" style="border-collapse: collapse; line-height: 40px; font-size: 40px; width: 1px;">&nbsp;</td></tr>
+        <tr>
+          <td align="center" style="border-collapse: collapse;">
+            <div class="button"><!--[if mso]>
+              <v:roundrect>
+                (xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href=link style="height:40px;v-text-anchor:middle;width:200px;" arcsize="5%" stroke="f" )
+                <w:anchorlock/>
+                <center style="color:#ffffff;text-transform: uppercase; font-family:'Open Sans',Trebuchet MS,Verdana, arial, sans-serif;font-size:13px;">Voir la vidéo
+                </center>
+              </v:roundrect><!--[endif]--><a id="url-name-${id}" href="#" style="line-height: 40px; background-color: #f4b356; color: #ffffff; display: inline-block; font-family: 'Open Sans',Trebuchet MS,Verdana, arial, sans-serif; font-size: 13px; border-radius: 2px; text-align: center; text-transform: uppercase; text-decoration: none; width: 200px; -webkit-text-size-adjust: none;" target="_blank">...</a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td height="60" width="1" style="border-collapse: collapse; line-height: 60px; font-size: 60px; width: 1px;">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+  </td>
+</tr>
+<tr><td height="20" width="1" style="border-collapse: collapse; line-height: 20px; font-size: 20px; width: 1px;">&nbsp;</td></tr>
+`
+
+const _id = document.getElementById.bind(document)
+
+const result = _id('result')
+const inputs = _id('inputs')
+const dlInput = _id('download')
+const dateInput = _id('article-date-input')
+const entryPoint = _id('entry')
+const articles = []
+const state = new Map()
+
+const saveFile = (text, name, type) => {
+  const file = new Blob([renderFinal()], {type: 'text/html'})
+  dlInput.href = URL.createObjectURL(file)
+  dlInput.download = `newsletter-payname-du-${dateInput.value}.html`
+}
+
+const newArticle = id => {
+  id || (id = btoa(Math.random().toString().slice(2, 10)))
+  articles.push(id)
+  const form = renderArticleForm(id)
+  const article = renderArticle(id)
+
+  inputs.insertAdjacentHTML("beforebegin", form)
+  entryPoint.insertAdjacentHTML("beforebegin", article)
+
+  const keys = [
+    {
+      id: 'img-url-'+ id,
+      placeholder: 'http://placehold.it/560x240',
+      update: (src, { target }) => target.src = src,
+    },
+    {
+      id: 'title-'+ id,
+      placeholder: 'Titre',
+      targets: [
+        'title-'+ id,
+        'img-url-'+ id,
+      ],
+      update: (title, { targets }) =>
+        targets[0].textContent = targets[1].alt = title,
+    },
+    {
+      id: 'url-'+ id,
+      placeholder: '#',
+      update: (href, { targets }) => targets.forEach(el => el.href = href),
+      targets: [
+        'url-name-'+ id,
+        'banner-link-'+ id,
+      ]
+    },
+    { id: 'url-name-'+ id, placeholder: 'link' },
+    {
+      id: 'content-'+ id,
+      update: (md, { target }) => target.innerHTML = marked(md),
+    },
+  ].forEach(addToState)
+}
+
+const resetAll = val => {
+  if (!val) return
+  Object.keys(localStorage)
+    .filter(val => /__art__/.test(val))
+    .forEach(key => localStorage.removeItem(key))
+  location.reload()
+}
+
+const camelize = str => str.replace(/[-_ ](.?)/g, (_, a) => a.toUpperCase())
+
+const addToState = data => {
+  if (!data.targets) {
+    data.targets = [ data.id ]
+  }
+
+  const targets = data.targets.map(_id).filter(Boolean)
+  const src = _id(data.id +'-input')
+  const key = camelize(data.id)
+  const storeKey = '__art__'+ key
+  let prevValue = src.value = localStorage[storeKey] || data.placeholder || ''
+
+  if (!data.update) {
+    data.update = val => targets.forEach(el => el.textContent = val)
+  }
+
+  const $ = {
+    key,
+    src,
+    targets,
+    storeKey,
+    target: targets[0],
+    recover: () => {
+      src.value = localStorage[storeKey] || data.placeholder || ''
+      $.update()
+    },
+    update: () => {
+      const newValue = src.value
+      if (newValue !== prevValue) {
+        data.update(prevValue = newValue, $)
+      }
+    },
+    store: () => localStorage[storeKey] = src.value || ''
+  }
+
+  data.update(prevValue, $)
+
+  state.set(key, $)
+}
+
+const autosave = () => {
+  localStorage.__art__articles = articles.join()
+  for (const [ _, el ] of state) {
+    el.store()
+  }
+}
+
+const updateVue = () => {
+  for (const [ _, el ] of state) {
+    el.update()
+  }
+}
+
+let vueInterval, autosaveInterval
+const startLoops = () => {
+  autosaveInterval = setInterval(autosave, 2000)
+  vueInterval = setInterval(updateVue, 16 * 4)
+}
+
+window.onfocus = () => {
+  console.log('refocused !')
+  for (const [ _, el ] of state) {
+    el.recover()
+  }
+  startLoops()
+}
+
+window.onblur = () => {
+  clearInterval(autosaveInterval)
+  clearInterval(vueInterval)
+  autosave()
+}
+
+;[
+  { id: 'article-title' },
+  {
+    id: 'article-date',
+    update: (val, { target }) => {
+      const [ y, m, d ] = val.split('-')
+      target.textContent = [ d, m, y ].join(' • ')
+    }
+  },
+].forEach(addToState)
+
+const init = () => {
+  (localStorage.__art__articles || '').split(',')
+    .filter(Boolean)
+    .forEach(newArticle)
+
+  try {
+    state.date = localStorage.articleDate
+  } catch (e) {}
+
+  // re-hydrate
+  articles.forEach(a => {
+    // renderArticleForm()
+  })
+
+  dateInput.valueAsDate = new Date();
+  startLoops()
+}
+
+init()
+
+
+</script>
+</body>
+</html>
