@@ -171,12 +171,14 @@ ol.linenums {
   background: #EAECED;
   min-height: 100%;
 }
+
 #right {
   float: right;
   padding: 20px;
   width: 50%;
   background: #fff;
 }
+
 #result > table > tbody > tr > td > table:nth-child(2) {
   margin: 0 auto;
 }
@@ -203,6 +205,11 @@ label {
   outline: rgba(0, 0, 0, 0.03) 2px solid;
 }
 
+.col button, .col input[type="button"], .col input[type="reset"], .col input[type="submit"] {
+  width: 180px;
+  margin-bottom: 4px;
+}
+
 </style>
 </head>
 <body>
@@ -215,7 +222,6 @@ label {
       <input type="date" id="article-date-input" name="article-date" value=>
     </fieldset>
   </form>
-  <a href="http://assemble.io/docs/Cheatsheet-Markdown.html">Exemples de markdown</a>
   <hr id="inputs">  
   <form>
     <fieldset>
@@ -420,9 +426,9 @@ const renderArticleForm = id => `
     <input type="text" id="url-${id}-input" name="url-${id}-input">
     <label for="url-name-${id}-input">Texte du bouton</label>
     <input type="text" id="url-name-${id}-input" name="url-name-${id}-input">
-    <label for="content-${id}-input">Contenu de l'article</label>
+    <label for="content-${id}-input">Contenu de l'article en markdown <a href="http://assemble.io/docs/Cheatsheet-Markdown.html">(exemples de syntaxe)</a></label>
+    <textarea id="content-${id}-input" name="content-${id}-input" rows="10" cols="50"></textarea>
   </fieldset>
-  <textarea id="content-${id}-input" name="content-${id}-input" rows="10" cols="50"></textarea>
 </form>
 `
 
