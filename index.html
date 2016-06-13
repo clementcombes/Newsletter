@@ -712,6 +712,7 @@ const modeUp = _id('article-mode-morning-up')
 const modePasUp = _id('article-mode-morning')
 
 modePasUp.onchange = modeUp.onchange = () => {
+  localStorage.mode = modeUp.checked ? 'morning-up' : 'morning'
   const newColor = modeUp.checked ? morningUpPrimary : morningPrimary
   if (primaryColor === newColor) return
   _id('logo').src = modeUp.checked ? morningUpLogo : morningLogo
@@ -730,6 +731,11 @@ const init = () => {
     .forEach(newArticle)
 
   startLoops()
+
+  if (localStorage.mode === 'morning-up') {
+    modeUp.checked = true
+    modeUp.onchange()
+  }
 }
 
 init()
