@@ -604,13 +604,19 @@ const newArticle = id => {
 
 const resetAll = val => {
   if (!val) return
-  Object.keys(localStorage)
-    .filter(val => /__art__/.test(val))
-    .forEach(key => localStorage.removeItem(key))
+  localStorage.clear()
+  setHash(exportState())
   location.reload()
 }
 
 const camelize = str => str.replace(/[-_ ](.?)/g, (_, a) => a.toUpperCase())
+
+const articleKeys = [ 'content', 'imgUrl', 'title', 'url', 'urlName' ]
+const urlAtob = str => atob(str).replace('=', '-').replace('+', '_')
+const urlBtoa = str => btoa(str.replace('-', '=').replace('_', '+'))
+const exportState = () => urlBtoa(encodeURIComponent(JSON.stringify(localStorage)))
+const importState = jsonState =>
+  Object.assign(localStorage, JSON.parse(decodeURIComponent(urlAtob(jsonState))))
 
 const addToState = data => {
   if (!data.targets) {
@@ -658,10 +664,28 @@ const autosave = () => {
   }
 }
 
+let __skipChange = false
+const setHash = hash => {
+  __skipChange = true
+  location.hash = hash
+}
+window.onhashchange = (({ newURL }) => {
+  if (__skipChange) return __skipChange = false
+  importState(newURL.slice(1))
+})
+
+try {
+  importState(location.hash.slice(1))
+} catch (err) {
+  console.log(err)
+  location.hash = ''
+}
+
 const updateVue = () => {
   for (const [ _, el ] of state) {
     el.update()
   }
+  setHash(exportState())
 }
 
 let vueInterval, autosaveInterval
